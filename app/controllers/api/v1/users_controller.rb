@@ -1,7 +1,7 @@
 class Api::V1::UsersController < ApplicationController
     def index 
         @users = User.all 
-        render json: @users
+        render json: @users.map{|user| {user: user, decks: user.decks, flashcards: user.decks.map{|deck| deck.flashcards}}}
     end
 
     def show
