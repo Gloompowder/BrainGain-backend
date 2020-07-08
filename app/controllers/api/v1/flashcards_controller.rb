@@ -22,6 +22,7 @@ class Api::V1::FlashcardsController < ApplicationController
     def destroy
         @flashcard = Flashcard.find(params[:id])
         @flashcard.destroy
+        render json: @flashcard
     end
 
     private 
