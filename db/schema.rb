@@ -15,6 +15,9 @@ ActiveRecord::Schema.define(version: 2020_06_24_132647) do
   create_table "decks", force: :cascade do |t|
     t.integer "user_id"
     t.string "name"
+    t.boolean "like"
+    t.string "comment"
+    t.boolean "private"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

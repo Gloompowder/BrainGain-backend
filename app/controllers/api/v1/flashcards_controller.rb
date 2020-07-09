@@ -16,6 +16,7 @@ class Api::V1::FlashcardsController < ApplicationController
 
     def update 
         @flashcard = Flashcard.find(params[:id])
+        @flashcard.update(flashcard_params)
         render json: @flashcard
     end 
 
