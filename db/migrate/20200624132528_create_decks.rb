@@ -3,7 +3,7 @@ class CreateDecks < ActiveRecord::Migration[6.0]
     create_table :decks do |t|
       t.integer :user_id
       t.string :name
-      # t.boolean :like
+      t.boolean :like
       # t.boolean :private
 
       t.timestamps

@@ -14,9 +14,9 @@ puts "destroying all Flashcards"
 
 user1 = User.create(username: "william.lin", password: "123", email: "william@gmail.com")
 
-deck1 = Deck.create(name: "Astronomy 101", user_id: user1.id)
-deck2 = Deck.create(name: "Culinary Terms", user_id: user1.id)
-deck3 = Deck.create(name: "Botany", user_id: user1.id)
+deck1 = Deck.create(name: "Astronomy 101", user_id: user1.id, like: false)
+deck2 = Deck.create(name: "Culinary Terms", user_id: user1.id, like: false)
+deck3 = Deck.create(name: "Botany", user_id: user1.id, like: false)
 
 flashcard1 = Flashcard.create(question:"Comet",answer:"A dirty snowball made of ice and rocky debris, typically a few miles across and orbits the sun in a long ellipse. When close to the sun, the warmth evaporates the ice in the nucleus to form a corona and a tail. Comets can sometimes make return visits in as little as a few years or as long as tens of thousands of years.", deck_id: deck1.id)
 flashcard2 = Flashcard.create(question:"Meridian",answer:"A meridian is an imaginary line that runs from the North Pole to the South Pole, connecting all locations sharing the same longitude. The moment when the Sun or the Moon crosses a location's meridian marks the instant when they reach the highest position in the sky, appearing either due south, due north, or directly overhead. For the Sun, it is the moment of solar noon.", deck_id: deck1.id)
