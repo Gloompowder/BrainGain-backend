@@ -1,7 +1,7 @@
 class Api::V1::DecksController < ApplicationController
     def index 
         @decks = Deck.all
-        render json: @decks.map{ |deck| {deck: deck, cards: deck.cards}}
+        render json: @decks.map{ |deck| {decks: @decks, deck: deck, cards: deck.cards}}
     end
 
     def show
